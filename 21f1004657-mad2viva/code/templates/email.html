@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+        </head>
+        <body>
+            <p>WELCOME TO TICKET BOOKING APP</p>
+            <p>GooD TO SEE YOU {{admin.username}} </p>
+            <article>
+            <div>
+                <p>VENUENAME : {{venuename}} </p>
+                <h1>SHOWNAME : {{showname}}</h1>
+                <h1>TIMING OF THE SHOW : "{{timing1}}-{{timing2}}"</h1>
+                <h2>REMAINING TICKETS TO BE SOLD : {{capacity}}</h2>
+                <p>LIST OF USERS WHO BOOKED THIS SHOW @ THE RESPECTIVE TICKETS</p>
+                {% for book in bookings %}
+                <h3 >USER NAME : "{{book.username}}" : Number Of Tickets Booked : "{{book.number}}" <h3>
+                {% endfor %}
+            </div>
+            </article>
+        </body>
+    </html>
